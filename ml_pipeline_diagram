@@ -1,0 +1,33 @@
+digraph {
+	A [label="Carga de Datos
+(train_set.csv, test_set.csv)" shape=parallelogram]
+	B [label="Exploración de Datos
+(EDA)" shape=box]
+	C [label="Feature Engineering
+(Transformaciones y Nuevas Variables)" shape=box]
+	D [label="División de Datos
+(Train, Validation, Test)" shape=box]
+	E [label="Entrenamiento del Modelo
+(LightGBM, XGBoost)" shape=box]
+	F [label="Evaluación del Modelo
+(Métricas y Comparación)" shape=box]
+	G [label="Generación de Predicciones
+(df_test)" shape=parallelogram]
+	H [label="Guardar Predicciones
+(submission_lightgbm.csv)" shape=parallelogram]
+	I [label="Despliegue con API
+(FastAPI/Flask)" shape=box style=dashed]
+	J [label="Empaquetado con Docker" shape=box style=dashed]
+	K [label="Despliegue en la Nube
+(AWS/GCP/Azure)" shape=box style=dashed]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	F -> I [style=dashed]
+	I -> J [style=dashed]
+	J -> K [style=dashed]
+}
